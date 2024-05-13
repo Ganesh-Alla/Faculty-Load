@@ -16,6 +16,7 @@ const nextauthoptions = {
                if (email !== 'admin@gmail.com' && password !== 'admin'){
                 throw new Error ('Credentials Invalid');
                }
+               console.log("first-auth")
                return {email:email}
             }})
         ],
