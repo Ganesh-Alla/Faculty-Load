@@ -29,6 +29,7 @@ const Login = () => {
         redirect: false,
         ...credentials,
       });
+      console.log("SignIN",signInStatus);
       if (signInStatus.ok) {
         router.replace('/home/Load-Allocation');
       }
