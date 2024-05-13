@@ -7,7 +7,7 @@ export async function middleware(request) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
-
+return
 }
 
 export const config = {
