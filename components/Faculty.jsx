@@ -116,9 +116,10 @@ const Faculty = () => {
     const {facultyDetails,loading} = useSelector((state) => state.faculty);
 
     const dispatch = useDispatch();
+
     useEffect(() => {
       dispatch(getFaculty());
-console.log("facultyDetails")
+        console.log("facultyDetails")
   }, [dispatch]);
 
     useEffect(() => {
@@ -163,7 +164,6 @@ useEffect(() => {
                 const upData = data.filter((item) => item.key === key);
                 dispatch(updateFaculty(upData[0]._id, row));
             }
-            dispatch(getFaculty());
             setEditingKey('');
             setEditable(false);
             setStart(false);

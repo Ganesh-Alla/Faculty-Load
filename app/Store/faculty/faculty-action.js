@@ -23,7 +23,8 @@ export const addFaculty = (key, row) => async (dispatch) => {
         });
 
         if (response.ok) {
-          dispatch(getFaculty()); // fetching all the data after adding a row and setting it to setDetails
+          dispatch(getFaculty()); 
+          console.log("Called getFaculty from add")// fetching all the data after adding a row and setting it to setDetails
         } else {
             const data = await response.json();
             dispatch(facultyAction.getErrors(data.message));
@@ -45,7 +46,8 @@ export const updateFaculty = (key, row) => async (dispatch) => {
         });
 
         if (response.ok) {
-          dispatch(getFaculty());// fetching all the data after updating a row and setting it to setDetails
+          dispatch(getFaculty());
+          console.log("Called getFaculty from update")// fetching all the data after updating a row and setting it to setDetails
         } else {
             const data = await response.json();
             dispatch(facultyAction.getErrors(data.message));
