@@ -5,7 +5,8 @@ export const getFaculty = () => async (dispatch) => {
         dispatch(facultyAction.getRequest());
         const response = await fetch('/api/Faculty');
         const data = await response.json();
-        dispatch(facultyAction.setDetails(data)); // fetching all the data from the database
+        dispatch(facultyAction.setDetails(data));
+        console.log("Called") // fetching all the data from the database
     } catch (error) {
         dispatch(facultyAction.getErrors(error.message));
     }
