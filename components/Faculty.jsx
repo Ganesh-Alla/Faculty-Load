@@ -163,6 +163,7 @@ useEffect(() => {
                 const upData = data.filter((item) => item.key === key);
                 dispatch(updateFaculty(upData[0]._id, row));
             }
+            dispatch(getFaculty());
             setEditingKey('');
             setEditable(false);
             setStart(false);
