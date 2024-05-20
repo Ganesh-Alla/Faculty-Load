@@ -127,7 +127,7 @@ const Faculty = () => {
             setData(facultyDetails);
         }
     }, [facultyDetails]);
-console.log("first",facultyDetails)
+//console.log("first",facultyDetails)
 
 const isEditing = (record) => record.key === editingKey;
 
