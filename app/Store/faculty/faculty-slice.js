@@ -26,6 +26,8 @@ const facultySlice=createSlice({
         setDetails(state,action){
             state.facultyDetails=action.payload.data;  //update the properties of your field
             state.loading=false;
+            console.log("actiondata",action.payload.data);
+            console.log("faculty",state.facultyDetails);
         },
         setExamDates(state,action){
             state.examdates=action.payload.data;  //update the properties of your field
