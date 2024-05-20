@@ -118,6 +118,7 @@ const Faculty = () => {
     const dispatch = useDispatch();
     useEffect(() => {
       dispatch(getFaculty());
+console.log("facultyDetails")
   }, [dispatch]);
 
     useEffect(() => {
@@ -125,7 +126,7 @@ const Faculty = () => {
             setData(facultyDetails);
         }
     }, [facultyDetails]);
-
+console.log("first",facultyDetails)
 
 const isEditing = (record) => record.key === editingKey;
 
